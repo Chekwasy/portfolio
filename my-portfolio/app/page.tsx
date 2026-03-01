@@ -196,7 +196,7 @@ export default function Home() {
               href="https://github.com/Chekwasy/bet.chekwasy.tech"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
             >
               View Source Code
             </a>
@@ -233,7 +233,7 @@ export default function Home() {
                 href="https://github.com/Chekwasy/cofee/tree/main/coffeeShop"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
               >
                 View Source Code
               </a>
@@ -271,7 +271,7 @@ export default function Home() {
                 href="https://github.com/Chekwasy/ecommerce/tree/main/clothy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
               >
                 View Source Code
               </a>
@@ -307,7 +307,7 @@ export default function Home() {
                 href="https://github.com/Chekwasy/betapp/tree/main/dey"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
               >
                 View Source Code
               </a>
