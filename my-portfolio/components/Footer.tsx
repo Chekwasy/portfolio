@@ -4,7 +4,9 @@ export default function Footer() {
       <div className="container mx-auto px-6 py-12">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <h2 className="text-xl font-semibold">Richard Chukwuchekwa</h2>
+            <h2 className="text-xl font-semibold text-zinc-300">
+              Richard Chukwuchekwa
+            </h2>
             <p className="mt-3 text-sm text-zinc-400">
               Full Stack Software Engineer specializing in scalable web
               applications and cloud deployments.
