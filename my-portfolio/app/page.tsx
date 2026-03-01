@@ -220,20 +220,21 @@ export default function Home() {
               <span>State Management</span>
             </div>
 
-            <div className="mt-6 flex gap-6">
+            <div className="mt-6 flex flex-wrap items-center gap-4">
               <a
                 href="https://youtu.be/2KJ2Dj4symw?si=Ia7-gjGqQP9h8Zh_"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm underline"
+                className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:opacity-90 transition"
               >
-                Watch Demo →
+                Watch Demo
               </a>
+
               <a
                 href="https://github.com/Chekwasy/cofee/tree/main/coffeeShop"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
+                className="px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
               >
                 View Source Code
               </a>
@@ -258,20 +259,21 @@ export default function Home() {
               <span>UI Architecture</span>
             </div>
 
-            <div className="mt-6 flex gap-6">
+            <div className="mt-6 flex flex-wrap items-center gap-4">
               <a
                 href="https://youtu.be/RpCuAaD6Zi0?si=Gwq9tSagLWGChzHI"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm underline"
+                className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:opacity-90 transition"
               >
-                Watch Demo →
+                Watch Demo
               </a>
+
               <a
                 href="https://github.com/Chekwasy/ecommerce/tree/main/clothy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
+                className="px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
               >
                 View Source Code
               </a>
@@ -294,20 +296,21 @@ export default function Home() {
               <span>REST API</span>
             </div>
 
-            <div className="mt-6 flex gap-6">
+            <div className="mt-6 flex flex-wrap items-center gap-4">
               <a
                 href="https://youtu.be/4QwUUQOSn2U?si=W9LAijPVKz-jIV_E"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm underline"
+                className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:opacity-90 transition"
               >
-                Watch Demo →
+                Watch Demo
               </a>
+
               <a
                 href="https://github.com/Chekwasy/betapp/tree/main/dey"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
+                className="px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
               >
                 View Source Code
               </a>
@@ -329,20 +332,21 @@ export default function Home() {
               <span>Media Handling</span>
             </div>
 
-            <div className="mt-6 flex gap-6">
+            <div className="mt-6 flex flex-wrap items-center gap-4">
               <a
                 href="https://youtube.com/shorts/eVdhqU6ZzDI?si=yt_4mSkkFGjP_FI7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm underline"
+                className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:opacity-90 transition"
               >
-                Watch Demo →
+                Watch Demo
               </a>
+
               <a
                 href="https://github.com/Chekwasy/Tranter/tree/master/nw"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
+                className="px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
               >
                 View Source Code
               </a>
