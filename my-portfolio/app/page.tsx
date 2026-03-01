@@ -260,7 +260,7 @@ export default function Home() {
 
             <div className="mt-6 flex gap-6">
               <a
-                href="https://your-demo-link.com"
+                href="https://youtu.be/RpCuAaD6Zi0?si=Gwq9tSagLWGChzHI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm underline"
