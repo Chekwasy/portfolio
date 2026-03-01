@@ -101,6 +101,14 @@ export default function Home() {
             >
               Live Project →
             </a>
+            <a
+              href="https://github.com/Chekwasy/nextjs/tree/main/bet"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
+            >
+              View Source Code
+            </a>
           </div>
 
           {/* PROJECT 2 – CRUD APP */}
@@ -137,6 +145,14 @@ export default function Home() {
               className="inline-block mt-6 text-sm underline"
             >
               Live Project →
+            </a>
+            <a
+              href="https://github.com/Chekwasy/nextjs/tree/main/crudapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
+            >
+              View Source Code
             </a>
           </div>
 
@@ -176,39 +192,161 @@ export default function Home() {
             >
               Live Project →
             </a>
+            <a
+              href="https://github.com/Chekwasy/bet.chekwasy.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
+            >
+              View Source Code
+            </a>
           </div>
 
-          {/* REACT NATIVE SECTION */}
+          {/* REACT NATIVE PROJECTS */}
+
+          {/* Coffee Store App */}
           <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition">
-            <h3 className="text-2xl font-semibold">
-              React Native Mobile Applications
-            </h3>
+            <h3 className="text-2xl font-semibold">Coffee Store Mobile App</h3>
 
             <p className="mt-4 text-zinc-400 leading-relaxed">
-              Built multiple React Native applications concurrently, showcasing
-              strong state management and backend integration.
+              E-commerce styled coffee store application with cart management,
+              product listing, and clean UI implementation. Built with
+              structured Redux state management.
             </p>
-
-            <ul className="mt-6 space-y-2 text-zinc-400 text-sm list-disc list-inside">
-              <li>Coffee Store App (Redux cart management)</li>
-              <li>Clothing Store UI (Male/Female categories)</li>
-              <li>Fuel Availability App (Express backend integrated)</li>
-              <li>Marketplace Store App with media showcase</li>
-            </ul>
 
             <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
               <span>React Native</span>
               <span>Redux</span>
-              <span>Express</span>
+              <span>State Management</span>
             </div>
 
-            <a
-              href="https://example.com/demo-video"
-              target="_blank"
-              className="inline-block mt-6 text-sm underline"
-            >
-              Watch Demo →
-            </a>
+            <div className="mt-6 flex gap-6">
+              <a
+                href="https://youtu.be/2KJ2Dj4symw?si=Ia7-gjGqQP9h8Zh_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm underline"
+              >
+                Watch Demo →
+              </a>
+              <a
+                href="https://github.com/Chekwasy/cofee/tree/main/coffeeShop"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
+              >
+                View Source Code
+              </a>
+            </div>
+          </div>
+
+          {/* Clothing Store App */}
+          <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition">
+            <h3 className="text-2xl font-semibold">
+              Clothing Store Mobile App
+            </h3>
+
+            <p className="mt-4 text-zinc-400 leading-relaxed">
+              Mobile store interface allowing users to browse male and female
+              clothing categories with a structured UI layout and scalable
+              component design. Frontend completed to a strong production-ready
+              level.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
+              <span>React Native</span>
+              <span>UI Architecture</span>
+            </div>
+
+            <div className="mt-6 flex gap-6">
+              <a
+                href="https://your-demo-link.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm underline"
+              >
+                Watch Demo →
+              </a>
+              <a
+                href="https://github.com/Chekwasy/ecommerce/tree/main/clothy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
+              >
+                View Source Code
+              </a>
+            </div>
+          </div>
+
+          {/* Fuel Availability App */}
+          <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition">
+            <h3 className="text-2xl font-semibold">Fuel Availability App</h3>
+
+            <p className="mt-4 text-zinc-400 leading-relaxed">
+              Fully completed mobile application allowing users to check fuel
+              availability by Local Government Area within a state. Integrated
+              with Express backend APIs.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
+              <span>React Native</span>
+              <span>Express</span>
+              <span>REST API</span>
+            </div>
+
+            <div className="mt-6 flex gap-6">
+              <a
+                href="https://youtu.be/4QwUUQOSn2U?si=W9LAijPVKz-jIV_E"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm underline"
+              >
+                Watch Demo →
+              </a>
+              <a
+                href="https://github.com/Chekwasy/betapp/tree/main/dey"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
+              >
+                View Source Code
+              </a>
+            </div>
+          </div>
+
+          {/* Marketplace Store App */}
+          <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition">
+            <h3 className="text-2xl font-semibold">Marketplace Store App</h3>
+
+            <p className="mt-4 text-zinc-400 leading-relaxed">
+              Store management application allowing vendors to upload product
+              images and videos to showcase what they sell. Frontend largely
+              completed with structured layout and media integration system.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
+              <span>React Native</span>
+              <span>Media Handling</span>
+            </div>
+
+            <div className="mt-6 flex gap-6">
+              <a
+                href="https://youtube.com/shorts/eVdhqU6ZzDI?si=yt_4mSkkFGjP_FI7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm underline"
+              >
+                Watch Demo →
+              </a>
+              <a
+                href="https://github.com/Chekwasy/Tranter/tree/master/nw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
+              >
+                View Source Code
+              </a>
+            </div>
           </div>
         </div>
       </section>
