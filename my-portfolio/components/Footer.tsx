@@ -8,8 +8,9 @@ export default function Footer() {
               Richard Chukwuchekwa
             </h2>
             <p className="mt-3 text-sm text-zinc-400">
-              Full Stack Software Engineer specializing in scalable web
-              applications and cloud deployments.
+              Full Stack TypeScript Engineer specializing in building scalable
+              web applications with Next.js, Node.js, and modern backend
+              systems.
             </p>
           </div>
 
@@ -17,22 +18,37 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-zinc-300">
               Connect
             </h3>
+
             <ul className="mt-4 space-y-2 text-sm text-zinc-400">
               <li>
-                <a href="https://github.com/Chekwasy" target="_blank">
+                <a
+                  href="https://github.com/Chekwasy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
                   GitHub
                 </a>
               </li>
+
               <li>
                 <a
                   href="https://www.linkedin.com/in/richard-chukwuchekwa-052543175"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
                 >
                   LinkedIn
                 </a>
               </li>
+
               <li>
-                <a href="mailto:richardchekwas@gmail.com">Email</a>
+                <a
+                  href="mailto:richardchekwas@gmail.com"
+                  className="hover:text-white"
+                >
+                  Email
+                </a>
               </li>
             </ul>
           </div>
@@ -41,8 +57,10 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-zinc-300">
               Availability
             </h3>
+
             <p className="mt-4 text-sm text-zinc-400">
-              Open to remote full-stack roles and contract opportunities.
+              Open to remote full-stack engineering roles and collaborative
+              product development opportunities.
             </p>
           </div>
         </div>

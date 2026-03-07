@@ -9,16 +9,30 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Richard Chukwuchekwa | Full Stack Software Engineer",
+  title: "Richard Chukwuchekwa | Full Stack TypeScript Engineer",
   description:
-    "Full Stack Software Engineer specializing in Next.js, React Native, Node.js, and cloud deployments. Experienced in building scalable applications with integrated payments and backend systems.",
+    "Full Stack TypeScript Engineer specializing in Next.js, Node.js, and scalable web applications. Experienced in building real-time systems, backend APIs, and deploying production platforms on DigitalOcean, Vercel, and Render.",
   keywords: [
-    "Full Stack Developer Nigeria",
+    "Full Stack TypeScript Developer",
     "Next.js Developer",
-    "React Native Developer",
     "Node.js Engineer",
+    "React Native Developer",
     "MongoDB Developer",
+    "JavaScript Engineer",
+    "Remote Full Stack Developer",
+    "Software Engineer Nigeria",
   ],
+  openGraph: {
+    title: "Richard Chukwuemeka | Full Stack TypeScript Engineer",
+    description:
+      "Full Stack TypeScript Engineer specializing in Next.js, Node.js, and scalable backend systems.",
+    url: "https://portfolio-nine-lovat-86.vercel.app/",
+    siteName: "Richard Chukwuchekwa Portfolio",
+    type: "website",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -33,7 +47,7 @@ export default function RootLayout({
       >
         <div className="flex min-h-screen flex-col">
           <Navbar />
-          <main className="flex-1 container mx-auto px-6 py-24">
+          <main className="flex-1 max-w-6xl mx-auto px-6 py-24">
             {children}
           </main>
           <Footer />
