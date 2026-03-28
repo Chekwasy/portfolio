@@ -196,6 +196,60 @@ export default function Home() {
               </a>
             </div>
           </div>
+          {/* TRYBET – VITE + EXPRESS */}
+          <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition">
+            <h3 className="text-2xl font-semibold">
+              Trybet (Early Architecture – React + Express)
+            </h3>
+
+            <p className="mt-4 text-zinc-400 leading-relaxed">
+              An earlier full-stack architecture of the Trybet platform built
+              using React (Vite) and Express. The system allowed users to place
+              bets on real-world matches, with backend services handling match
+              data retrieval, bet processing, and automated result updates.
+              Deployed using a combination of cloud platforms and VPS
+              infrastructure.
+            </p>
+
+            <ul className="mt-6 space-y-2 text-zinc-400 text-sm list-disc list-inside">
+              <li>
+                Full-stack architecture with React (Vite) and Express backend
+              </li>
+              <li>Real-time match data scraping and updates</li>
+              <li>Bet booking and result processing system</li>
+              <li>REST API design and backend service integration</li>
+              <li>VPS deployment with Nginx reverse proxy and SSL setup</li>
+              <li>Frontend and backend deployed across Vercel and Render</li>
+            </ul>
+
+            <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
+              <span>React (Vite)</span>
+              <span>Express</span>
+              <span>MongoDB</span>
+              <span>DigitalOcean</span>
+              <span>Render</span>
+            </div>
+
+            <div className="mt-6 flex gap-4">
+              <a
+                href="https://bet-chekwasy-tech.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:opacity-90 transition"
+              >
+                Live Demo
+              </a>
+
+              <a
+                href="https://github.com/Chekwasy/bet.chekwasy.tech"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
