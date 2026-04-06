@@ -8,15 +8,14 @@ export default function Home() {
         </p>
 
         <h1 className="mt-6 text-5xl md:text-7xl font-bold leading-tight">
-          I build scalable web and mobile applications.
+          I build scalable, production-ready web applications.
         </h1>
 
         <p className="mt-8 max-w-2xl text-lg text-zinc-400">
-          Independent developer with 2+ years of experience designing, building,
-          and deploying full-stack platforms using Next.js, React Native,
-          Node.js, and MongoDB. Experienced in building real-time systems,
-          automated data workflows, and deploying production applications across
-          DigitalOcean, Vercel, and Render.
+          Full-stack TypeScript engineer building production-ready platforms
+          with Next.js, Node.js, and modern cloud services. Experienced in
+          designing secure authentication systems, media handling pipelines, and
+          scalable APIs using Supabase, PostgreSQL, and Cloudinary.
         </p>
 
         {/* CORE EXPERTISE */}
@@ -28,7 +27,10 @@ export default function Home() {
             Backend APIs
           </span>
           <span className="border border-white/10 px-3 py-1 rounded-full">
-            Real-Time Automation
+            Authentication Systems
+          </span>
+          <span className="border border-white/10 px-3 py-1 rounded-full">
+            Media Upload Pipelines
           </span>
           <span className="border border-white/10 px-3 py-1 rounded-full">
             Cloud Deployment
@@ -66,9 +68,12 @@ export default function Home() {
           <div>Node.js</div>
           <div>Express</div>
           <div>MongoDB</div>
-          <div>MySQL</div>
           <div>PostgreSQL</div>
+          <div>MySQL</div>
           <div>Redis</div>
+          <div>Supabase</div>
+          <div>Cloudinary</div>
+          <div>Redux</div>
           <div>DigitalOcean</div>
           <div>Vercel</div>
           <div>Render</div>
@@ -80,6 +85,64 @@ export default function Home() {
         <h2 className="text-4xl font-semibold">Featured Projects</h2>
 
         <div className="space-y-12">
+          {/* SAFEBOARD */}
+          <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition">
+            <h3 className="text-2xl font-semibold">
+              SafeBoard – Transport Safety Platform
+            </h3>
+
+            <p className="mt-4 text-zinc-400 leading-relaxed">
+              A production-ready transport safety web application that allows
+              users to log trips by capturing vehicle plate numbers and images
+              of the vehicle, driver, and helper. Built with secure
+              authentication, cloud media handling, and scalable backend APIs.
+            </p>
+
+            <ul className="mt-6 space-y-2 text-zinc-400 text-sm list-disc list-inside">
+              <li>Multi-step trip creation with camera capture</li>
+              <li>Fallback image upload for incomplete trips</li>
+              <li>Secure authentication & password reset (Supabase)</li>
+              <li>Cloudinary signed upload pipeline</li>
+              <li>Trip history with pagination & detailed view</li>
+              <li>Missing image detection & update system</li>
+              <li>Fully responsive UI</li>
+            </ul>
+
+            <div className="mt-6 text-sm text-zinc-400">
+              <p className="font-semibold text-zinc-300 mb-2">
+                Engineering Approach
+              </p>
+
+              <p>
+                Built with a modular architecture separating trip creation,
+                media uploads, and persistence. Secure signed uploads and
+                Supabase authentication ensure scalability and security while
+                allowing progressive completion of trip data.
+              </p>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>Supabase</span>
+              <span>PostgreSQL</span>
+              <span>Cloudinary</span>
+              <span>Redux</span>
+              <span>Vercel</span>
+            </div>
+
+            <div className="mt-6 flex gap-4">
+              <a
+                href="https://safeboard.com.ng"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:opacity-90 transition"
+              >
+                Live Demo
+              </a>
+            </div>
+          </div>
+
           {/* TRYBET */}
           <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition">
             <h3 className="text-2xl font-semibold">
@@ -253,17 +316,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DEPLOYMENT EXPERIENCE */}
+      {/* DEPLOYMENT */}
       <section>
         <h2 className="text-3xl font-semibold mb-8">
           Cloud & Deployment Experience
         </h2>
 
         <p className="max-w-3xl text-zinc-400">
-          Experienced in deploying production applications using DigitalOcean
-          VPS infrastructure, configuring Nginx reverse proxies, managing Redis
-          caching, and deploying modern web applications across Vercel and
-          Render.
+          Experienced in deploying production-grade applications using Vercel,
+          DigitalOcean VPS, and Render. Skilled in configuring Nginx, managing
+          secure environments, handling authentication flows, and integrating
+          cloud services like Supabase and Cloudinary.
         </p>
       </section>
 
