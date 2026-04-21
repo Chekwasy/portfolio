@@ -8,32 +8,27 @@ export default function Home() {
         </p>
 
         <h1 className="mt-6 text-5xl md:text-7xl font-bold leading-tight">
-          I build scalable, production-ready web applications.
+          I build scalable, real-world web platforms.
         </h1>
 
         <p className="mt-8 max-w-2xl text-lg text-zinc-400">
-          Full-stack TypeScript engineer building production-ready platforms
-          with Next.js, Node.js, and modern cloud services. Experienced in
-          designing secure authentication systems, media handling pipelines, and
-          scalable APIs using Supabase, PostgreSQL, and Cloudinary.
+          I design and ship production systems with a focus on performance,
+          scalability, and real user impact. My work spans PostgreSQL, MongoDB,
+          Redis, and modern TypeScript stacks.
         </p>
 
-        {/* CORE EXPERTISE */}
         <div className="mt-6 flex flex-wrap gap-3 text-sm text-zinc-500">
           <span className="border border-white/10 px-3 py-1 rounded-full">
-            Next.js Systems
+            System Design
           </span>
           <span className="border border-white/10 px-3 py-1 rounded-full">
-            Backend APIs
+            Backend Engineering
           </span>
           <span className="border border-white/10 px-3 py-1 rounded-full">
-            Authentication Systems
+            PostgreSQL / Supabase
           </span>
           <span className="border border-white/10 px-3 py-1 rounded-full">
-            Media Upload Pipelines
-          </span>
-          <span className="border border-white/10 px-3 py-1 rounded-full">
-            Cloud Deployment
+            MongoDB / Redis
           </span>
         </div>
 
@@ -48,7 +43,6 @@ export default function Home() {
           <a
             href="https://github.com/Chekwasy"
             target="_blank"
-            rel="noopener noreferrer"
             className="px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition"
           >
             GitHub
@@ -56,287 +50,167 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TECH STACK */}
-      <section>
-        <h2 className="text-3xl font-semibold mb-10">Tech Stack</h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-zinc-400">
-          <div>Next.js</div>
-          <div>TypeScript</div>
-          <div>React</div>
-          <div>React Native</div>
-          <div>Node.js</div>
-          <div>Express</div>
-          <div>MongoDB</div>
-          <div>PostgreSQL</div>
-          <div>MySQL</div>
-          <div>Redis</div>
-          <div>Supabase</div>
-          <div>Cloudinary</div>
-          <div>Redux</div>
-          <div>DigitalOcean</div>
-          <div>Vercel</div>
-          <div>Render</div>
-        </div>
-      </section>
-
       {/* PROJECTS */}
       <section id="projects" className="space-y-16">
-        <h2 className="text-4xl font-semibold">Featured Projects</h2>
+        <h2 className="text-4xl font-semibold">Projects</h2>
 
-        <div className="space-y-12">
-          {/* SAFEBOARD */}
-          <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition">
-            <h3 className="text-2xl font-semibold">
-              SafeBoard – Transport Safety Platform
-            </h3>
+        {/* TRYBET CURRENT */}
+        <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition">
+          <h3 className="text-2xl font-semibold">
+            Trybet (PostgreSQL + Supabase – Current)
+          </h3>
 
-            <p className="mt-4 text-zinc-400 leading-relaxed">
-              A production-ready transport safety web application that allows
-              users to log trips by capturing vehicle plate numbers and images
-              of the vehicle, driver, and helper. Built with secure
-              authentication, cloud media handling, and scalable backend APIs.
-            </p>
+          <p className="mt-4 text-zinc-400">
+            Modern betting simulation platform built for scalability using
+            PostgreSQL and Supabase. Designed with structured data
+            relationships, wallet systems, and an improved UI for real users.
+          </p>
 
-            <ul className="mt-6 space-y-2 text-zinc-400 text-sm list-disc list-inside">
-              <li>Multi-step trip creation with camera capture</li>
-              <li>Fallback image upload for incomplete trips</li>
-              <li>Secure authentication & password reset (Supabase)</li>
-              <li>Cloudinary signed upload pipeline</li>
-              <li>Trip history with pagination & detailed view</li>
-              <li>Missing image detection & update system</li>
-              <li>Fully responsive UI</li>
-            </ul>
-
-            <div className="mt-6 text-sm text-zinc-400">
-              <p className="font-semibold text-zinc-300 mb-2">
-                Engineering Approach
-              </p>
-
-              <p>
-                Built with a modular architecture separating trip creation,
-                media uploads, and persistence. Secure signed uploads and
-                Supabase authentication ensure scalability and security while
-                allowing progressive completion of trip data.
-              </p>
-            </div>
-
-            <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
-              <span>Next.js</span>
-              <span>TypeScript</span>
-              <span>Supabase</span>
-              <span>PostgreSQL</span>
-              <span>Cloudinary</span>
-              <span>Redux</span>
-              <span>Vercel</span>
-            </div>
-
-            <div className="mt-6 flex gap-4">
-              <a
-                href="https://safeboard.com.ng"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:opacity-90 transition"
-              >
-                Live Demo
-              </a>
-            </div>
+          <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
+            <span>Next.js</span>
+            <span>PostgreSQL</span>
+            <span>Supabase</span>
           </div>
 
-          {/* TRYBET */}
-          <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition">
-            <h3 className="text-2xl font-semibold">
-              Trybet – Simulated Betting Platform
-            </h3>
-
-            <p className="mt-4 text-zinc-400 leading-relaxed">
-              A full-stack betting simulation platform that allows users to
-              place virtual bets on real football matches. The system
-              automatically retrieves match results and resolves bets, updating
-              wallet balances and user dashboards without manual intervention.
-            </p>
-
-            <ul className="mt-6 space-y-2 text-zinc-400 text-sm list-disc list-inside">
-              <li>Real-time match data scraping</li>
-              <li>Automated bet settlement system</li>
-              <li>Virtual wallet balance architecture</li>
-              <li>User dashboard for live game tracking</li>
-              <li>Hidden admin dashboard for system monitoring</li>
-              <li>MongoDB data modeling and transaction logic</li>
-              <li>Fully typed TypeScript codebase</li>
-            </ul>
-
-            {/* ENGINEERING APPROACH */}
-            <div className="mt-6 text-sm text-zinc-400">
-              <p className="font-semibold text-zinc-300 mb-2">
-                Engineering Approach
-              </p>
-
-              <p>
-                The platform was designed with a modular architecture separating
-                match data retrieval, bet processing logic, and wallet balance
-                management. Automated match resolution processes update bet
-                outcomes and user balances once match results are confirmed,
-                ensuring data consistency and eliminating manual settlement
-                processes.
-              </p>
-            </div>
-
-            <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
-              <span>Next.js</span>
-              <span>TypeScript</span>
-              <span>MongoDB</span>
-              <span>Web Scraping</span>
-              <span>Vercel</span>
-            </div>
-
-            <div className="mt-6 flex gap-4">
-              <a
-                href="https://nextjs-qvmz.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:opacity-90 transition"
-              >
-                Live Demo
-              </a>
-
-              <a
-                href="https://github.com/Chekwasy/trybet-betting-platform"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
-              >
-                GitHub
-              </a>
-            </div>
-          </div>
-
-          {/* CRUD APP */}
-          <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition">
-            <h3 className="text-2xl font-semibold">Worker Management System</h3>
-
-            <p className="mt-4 text-zinc-400 leading-relaxed">
-              A full-stack worker management dashboard designed to manage
-              employee records through a secure administrative interface. The
-              system includes authentication, worker CRUD operations, and
-              profile image uploads while maintaining a responsive user
-              experience with skeleton loading.
-            </p>
-
-            <ul className="mt-6 space-y-2 text-zinc-400 text-sm list-disc list-inside">
-              <li>Secure authentication system</li>
-              <li>Worker creation, editing, and deletion</li>
-              <li>Profile image upload functionality</li>
-              <li>Skeleton loading for optimized UX</li>
-              <li>MongoDB schema modeling</li>
-              <li>Full TypeScript architecture</li>
-            </ul>
-
-            <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
-              <span>Next.js</span>
-              <span>TypeScript</span>
-              <span>MongoDB</span>
-              <span>Vercel</span>
-            </div>
-
-            <div className="mt-6 flex gap-4">
-              <a
-                href="https://crudapp-alpha-one.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:opacity-90 transition"
-              >
-                Live Demo
-              </a>
-
-              <a
-                href="https://github.com/Chekwasy/worker-management-system"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
-              >
-                GitHub
-              </a>
-            </div>
-          </div>
-          {/* TRYBET – VITE + EXPRESS */}
-          <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition">
-            <h3 className="text-2xl font-semibold">
-              Trybet (Early Architecture – React + Express)
-            </h3>
-
-            <p className="mt-4 text-zinc-400 leading-relaxed">
-              An earlier full-stack architecture of the Trybet platform built
-              using React (Vite) and Express. The system allowed users to place
-              bets on real-world matches, with backend services handling match
-              data retrieval, bet processing, and automated result updates.
-              Deployed using a combination of cloud platforms and VPS
-              infrastructure.
-            </p>
-
-            <ul className="mt-6 space-y-2 text-zinc-400 text-sm list-disc list-inside">
-              <li>
-                Full-stack architecture with React (Vite) and Express backend
-              </li>
-              <li>Real-time match data scraping and updates</li>
-              <li>Bet booking and result processing system</li>
-              <li>REST API design and backend service integration</li>
-              <li>VPS deployment with Nginx reverse proxy and SSL setup</li>
-              <li>Frontend and backend deployed across Vercel and Render</li>
-            </ul>
-
-            <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
-              <span>React (Vite)</span>
-              <span>Express</span>
-              <span>MongoDB</span>
-              <span>DigitalOcean</span>
-              <span>Render</span>
-            </div>
-
-            <div className="mt-6 flex gap-4">
-              <a
-                href="https://bet-chekwasy-tech.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:opacity-90 transition"
-              >
-                Live Demo
-              </a>
-
-              <a
-                href="https://github.com/Chekwasy/bet.chekwasy.tech"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-sm"
-              >
-                GitHub
-              </a>
-            </div>
+          <div className="mt-6 flex gap-4">
+            <a
+              href="https://trybet.com.ng"
+              target="_blank"
+              className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium"
+            >
+              Live Demo
+            </a>
           </div>
         </div>
-      </section>
 
-      {/* DEPLOYMENT */}
-      <section>
-        <h2 className="text-3xl font-semibold mb-8">
-          Cloud & Deployment Experience
-        </h2>
+        {/* SAFEBOARD */}
+        <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition">
+          <h3 className="text-2xl font-semibold">
+            SafeBoard – Transport Safety Platform
+          </h3>
 
-        <p className="max-w-3xl text-zinc-400">
-          Experienced in deploying production-grade applications using Vercel,
-          DigitalOcean VPS, and Render. Skilled in configuring Nginx, managing
-          secure environments, handling authentication flows, and integrating
-          cloud services like Supabase and Cloudinary.
-        </p>
+          <p className="mt-4 text-zinc-400">
+            A real-world safety platform that enables users to upload and verify
+            vehicle data. Built with scalable backend systems and media
+            pipelines.
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
+            <span>Next.js</span>
+            <span>Supabase</span>
+            <span>Cloudinary</span>
+          </div>
+
+          <div className="mt-6 flex gap-4">
+            <a
+              href="https://safeboard.com.ng"
+              target="_blank"
+              className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium"
+            >
+              Live Demo
+            </a>
+          </div>
+        </div>
+
+        {/* TRYBET REDIS VERSION */}
+        <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition">
+          <h3 className="text-2xl font-semibold">
+            Trybet (MongoDB + Redis Version)
+          </h3>
+
+          <p className="mt-4 text-zinc-400">
+            Performance-focused version of Trybet using MongoDB Atlas and
+            Upstash Redis to improve speed, caching, and efficiency of betting
+            operations.
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
+            <span>MongoDB Atlas</span>
+            <span>Redis (Upstash)</span>
+            <span>Node.js</span>
+          </div>
+        </div>
+
+        {/* WORKER SYSTEM */}
+        <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition">
+          <h3 className="text-2xl font-semibold">Worker Management System</h3>
+
+          <p className="mt-4 text-zinc-400">
+            Admin dashboard for managing worker records with authentication,
+            CRUD operations, and image uploads.
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
+            <span>Next.js</span>
+            <span>MongoDB</span>
+          </div>
+
+          <div className="mt-6 flex gap-4">
+            <a
+              href="https://crudapp-alpha-one.vercel.app/"
+              target="_blank"
+              className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium"
+            >
+              Live Demo
+            </a>
+
+            <a
+              href="https://github.com/Chekwasy/worker-management-system"
+              target="_blank"
+              className="px-4 py-2 rounded-full border border-white/20 text-sm"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        {/* CHEKWASYBET */}
+        <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition">
+          <h3 className="text-2xl font-semibold">
+            ChekwasyBet (First Version)
+          </h3>
+
+          <p className="mt-4 text-zinc-400">
+            Early version of Trybet built with React (Vite) and Express. This
+            system established the foundation for betting logic and backend
+            APIs.
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
+            <span>React (Vite)</span>
+            <span>Express</span>
+            <span>MongoDB</span>
+          </div>
+
+          <div className="mt-6 flex gap-4">
+            <a
+              href="https://bet-chekwasy-tech.vercel.app/"
+              target="_blank"
+              className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium"
+            >
+              Live Demo
+            </a>
+
+            <a
+              href="https://github.com/Chekwasy/bet.chekwasy.tech"
+              target="_blank"
+              className="px-4 py-2 rounded-full border border-white/20 text-sm"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="text-center space-y-6">
-        <h2 className="text-3xl font-semibold">Let’s Build Something Great</h2>
+      <section className="text-center space-y-6">
+        <h2 className="text-3xl font-semibold">
+          Let’s Build Something Scalable
+        </h2>
 
         <a
           href="mailto:richardchekwas@gmail.com"
-          className="inline-block px-8 py-4 rounded-full bg-white text-black font-medium hover:opacity-90 transition"
+          className="inline-block px-8 py-4 rounded-full bg-white text-black font-medium"
         >
           Get In Touch
         </a>
