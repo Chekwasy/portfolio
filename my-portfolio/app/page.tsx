@@ -129,6 +129,23 @@ export default function Home() {
             <span>Redis (Upstash)</span>
             <span>Node.js</span>
           </div>
+          <div className="mt-6 flex gap-4">
+            <a
+              href="https://nextjs-qvmz.vercel.app/"
+              target="_blank"
+              className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium"
+            >
+              Live Demo
+            </a>
+
+            <a
+              href="https://github.com/Chekwasy/trybet-betting-platform/"
+              target="_blank"
+              className="px-4 py-2 rounded-full border border-white/20 text-sm"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
 
         {/* WORKER SYSTEM */}
