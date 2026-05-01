@@ -1,456 +1,190 @@
+import React from 'react';
+
+/* ✅ TYPES */
+type ProjectProps = {
+  title: string;
+  description: string;
+  tech: string[];
+  live?: string;
+  github?: string;
+};
+
+/* ✅ SUB-COMPONENT: PROJECT CARD */
+function ProjectCard({
+  title,
+  description,
+  tech,
+  live,
+  github,
+}: ProjectProps) {
+  return (
+    <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition-colors bg-zinc-900/50">
+      <h3 className="text-2xl font-semibold text-white">{title}</h3>
+
+      <p className="mt-4 text-zinc-400 whitespace-pre-line leading-relaxed">
+        {description}
+      </p>
+
+      <div className="mt-6 flex flex-wrap gap-2">
+        {tech.map((t) => (
+          <span 
+            key={t} 
+            className="px-2 py-1 rounded bg-zinc-800 text-zinc-500 text-[10px] uppercase tracking-wider font-medium"
+          >
+            {t}
+          </span>
+        ))}
+      </div>
+
+      <div className="mt-8 flex gap-4">
+        {live && (
+          <a
+            href={live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2 rounded-full bg-white text-black text-sm font-semibold hover:bg-zinc-200 transition"
+          >
+            Live Demo
+          </a>
+        )}
+
+        {github && (
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2 rounded-full border border-white/20 text-white text-sm font-medium hover:bg-white/10 transition"
+          >
+            GitHub
+          </a>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* ✅ MAIN PAGE */
 export default function Home() {
-return ( <div className="space-y-40">
+  return (
+    <div className="min-h-screen bg-black text-zinc-100 selection:bg-white selection:text-black">
+      <main className="max-w-5xl mx-auto px-6 pb-24 space-y-40">
+        
+        {/* HERO SECTION */}
+        <section className="min-h-[90vh] flex flex-col justify-center">
+          <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 font-medium">
+            Full Stack TypeScript Engineer · Backend Systems
+          </p>
 
-```
-  {/* HERO */}
-  <section className="min-h-[85vh] flex flex-col justify-center">
-    <p className="text-sm uppercase tracking-widest text-zinc-400">
-      Full Stack TypeScript Engineer · Backend Systems
-    </p>
+          <h1 className="mt-8 text-5xl md:text-8xl font-bold tracking-tight leading-[1.1]">
+            I design and build <br />
+            <span className="text-zinc-500">scalable platforms.</span>
+          </h1>
 
-    <h1 className="mt-6 text-5xl md:text-7xl font-bold leading-tight">
-      I design and build scalable backend-driven platforms.
-    </h1>
+          <p className="mt-10 max-w-2xl text-xl text-zinc-400 leading-relaxed">
+            I build real-world systems with secure authentication, structured
+            databases, and production-grade architecture. My work focuses on
+            PostgreSQL (TypeORM & Supabase), Redis caching, and designing systems
+            that scale reliably under real usage.
+          </p>
 
-    <p className="mt-8 max-w-2xl text-lg text-zinc-400">
-      I build real-world systems with secure authentication, structured
-      databases, and production-grade architecture. My work focuses on
-      PostgreSQL (TypeORM & Supabase), Redis caching, and designing systems
-      that scale reliably under real usage.
-    </p>
+          <div className="mt-8 flex flex-wrap gap-3 text-sm">
+            {[
+              "Backend Engineering", 
+              "System Design", 
+              "PostgreSQL / TypeORM", 
+              "Redis / JWT Auth", 
+              "MongoDB / Supabase"
+            ].map((skill) => (
+              <span key={skill} className="border border-white/10 px-4 py-1.5 rounded-full bg-zinc-900/50">
+                {skill}
+              </span>
+            ))}
+          </div>
 
-    <div className="mt-6 flex flex-wrap gap-3 text-sm text-zinc-500">
-      <span className="border border-white/10 px-3 py-1 rounded-full">
-        Backend Engineering
-      </span>
-      <span className="border border-white/10 px-3 py-1 rounded-full">
-        System Design
-      </span>
-      <span className="border border-white/10 px-3 py-1 rounded-full">
-        PostgreSQL / TypeORM
-      </span>
-      <span className="border border-white/10 px-3 py-1 rounded-full">
-        Redis / JWT Auth
-      </span>
-      <span className="border border-white/10 px-3 py-1 rounded-full">
-        MongoDB / Supabase
-      </span>
+          <div className="mt-12 flex flex-wrap gap-5">
+            <a
+              href="#projects"
+              className="px-8 py-4 rounded-full bg-white text-black font-bold hover:scale-105 transition-transform"
+            >
+              View Projects
+            </a>
+
+            <a
+              href="https://github.com/Chekwasy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 rounded-full border border-white/20 font-medium hover:bg-white/5 transition"
+            >
+              GitHub
+            </a>
+          </div>
+        </section>
+
+        {/* PROJECTS SECTION */}
+        <section id="projects" className="space-y-12">
+          <div className="space-y-2">
+            <h2 className="text-4xl font-bold tracking-tight">Selected Projects</h2>
+            <div className="h-1 w-20 bg-white rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8">
+            <ProjectCard
+              title="Healthcare Appointment System (TypeORM + Redis + JWT)"
+              description="A production-grade healthcare system with role-based workflows for doctors and patients. Implements slot locking and transactional booking to prevent double booking."
+              tech={["Next.js", "TypeScript", "PostgreSQL", "TypeORM", "Redis", "JWT"]}
+              github="https://github.com/Chekwasy/health-typeorm"
+            />
+
+            <ProjectCard
+              title="Trybet (PostgreSQL + Supabase)"
+              description="A betting simulation platform with wallet logic and prediction systems. Built with relational PostgreSQL design and real-time updates."
+              tech={["Next.js", "PostgreSQL", "Supabase"]}
+              live="https://trybet.com.ng"
+            />
+
+            <ProjectCard
+              title="SafeBoard – Transport Safety Platform"
+              description="A system for verifying vehicle data with structured backend workflows. Includes Cloudinary media uploads and validation pipelines."
+              tech={["Next.js", "Supabase", "Cloudinary"]}
+              live="https://safeboard.com.ng"
+            />
+
+            <ProjectCard
+              title="Healthcare Appointment System (Supabase Version)"
+              description="Initial version handled scheduling and role-based access control. Demonstrates the transition from BaaS to custom architecture."
+              tech={["Next.js", "Supabase", "PostgreSQL"]}
+              live="https://health-frontend-eight.vercel.app/"
+              github="https://github.com/Chekwasy/health-frontend"
+            />
+
+            <ProjectCard
+              title="Trybet (MongoDB + Redis Version)"
+              description="Performance-focused version using MongoDB and Redis caching. Optimized for fast reads and reduced database load."
+              tech={["MongoDB", "Redis", "Node.js"]}
+              live="https://nextjs-qvmz.vercel.app/"
+              github="https://github.com/Chekwasy/trybet-betting-platform/"
+            />
+          </div>
+        </section>
+
+        {/* CONTACT SECTION */}
+        <section className="py-20 border-t border-white/10 text-center space-y-8">
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Let’s Build Something Scalable
+          </h2>
+
+          <p className="text-zinc-400 max-w-md mx-auto text-lg">
+            I’m currently open to new opportunities and technical collaborations.
+          </p>
+
+          <a
+            href="mailto:richardchekwas@gmail.com"
+            className="inline-block px-10 py-5 rounded-full bg-white text-black font-bold text-lg hover:opacity-90 transition"
+          >
+            Get In Touch
+          </a>
+        </section>
+      </main>
     </div>
-
-    <div className="mt-10 flex flex-wrap gap-4">
-      <a
-        href="#projects"
-        className="px-6 py-3 rounded-full bg-white text-black font-medium hover:opacity-90 transition"
-      >
-        View Projects
-      </a>
-
-      <a
-        href="https://github.com/Chekwasy"
-        target="_blank"
-        className="px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition"
-      >
-        GitHub
-      </a>
-    </div>
-  </section>
-
-  {/* PROJECTS */}
-  <section id="projects" className="space-y-16">
-    <h2 className="text-4xl font-semibold">Projects</h2>
-
-    {/* HEALTHCARE TYPEORM */}
-    <ProjectCard
-      title="Healthcare Appointment System (TypeORM + Redis + JWT)"
-      description={`A production-grade healthcare system with role-based workflows for doctors and patients.
-```
-
-Patients can book, cancel, and reschedule appointments, while doctors manage schedules and confirm visits.
-
-Built with TypeORM and PostgreSQL for strict relational integrity. Authentication is handled using JWT and Redis sessions.
-
-Implements slot locking, transactional booking, and strict state transitions to prevent double booking and ensure data consistency.`}
-tech={["Next.js", "TypeScript", "PostgreSQL", "TypeORM", "Redis", "JWT"]}
-github="https://github.com/Chekwasy/health-typeorm"
-/>
-
-```
-    {/* HEALTHCARE SUPABASE */}
-    <ProjectCard
-      title="Healthcare Appointment System (Supabase Version)"
-      description={`Initial version of the healthcare system built with Supabase.
-```
-
-Focused on rapid development using Supabase Auth and relational joins.
-
-Handled scheduling, booking, and role-based access control.
-
-This project demonstrates the transition from backend-as-a-service to a fully custom backend architecture.`}
-tech={["Next.js", "Supabase", "PostgreSQL"]}
-live="https://health-frontend-eight.vercel.app/"
-github="https://github.com/Chekwasy/health-frontend"
-/>
-
-```
-    {/* TRYBET CURRENT */}
-    <ProjectCard
-      title="Trybet (PostgreSQL + Supabase)"
-      description={`A scalable betting simulation platform with wallet systems and prediction logic.
-```
-
-Built using PostgreSQL relational design and Supabase for real-time updates.
-
-Includes transaction flows, admin controls, and optimized UI for engagement.`}
-tech={["Next.js", "PostgreSQL", "Supabase"]}
-live="https://trybet.com.ng"
-/>
-
-```
-    {/* SAFEBOARD */}
-    <ProjectCard
-      title="SafeBoard – Transport Safety Platform"
-      description={`A real-world system for verifying vehicle data and improving transport safety.
-```
-
-Includes media uploads using Cloudinary and backend validation pipelines.
-
-Designed for scalability and structured data handling.`}
-tech={["Next.js", "Supabase", "Cloudinary"]}
-live="https://safeboard.com.ng"
-/>
-
-```
-    {/* TRYBET REDIS */}
-    <ProjectCard
-      title="Trybet (MongoDB + Redis Version)"
-      description={`Performance-optimized version of Trybet using MongoDB and Redis.
-```
-
-Focuses on caching, reducing database load, and improving response time.
-
-Demonstrates system performance optimization techniques.`}
-tech={["MongoDB", "Redis", "Node.js"]}
-live="https://nextjs-qvmz.vercel.app/"
-github="https://github.com/Chekwasy/trybet-betting-platform/"
-/>
-
-```
-    {/* WORKER SYSTEM */}
-    <ProjectCard
-      title="Worker Management System"
-      description={`Admin dashboard with authentication, CRUD operations, and image uploads.
-```
-
-Designed to demonstrate structured backend logic and UI interaction patterns.`}
-tech={["Next.js", "MongoDB"]}
-live="https://crudapp-alpha-one.vercel.app/"
-github="https://github.com/Chekwasy/worker-management-system"
-/>
-
-```
-    {/* CHEKWASYBET */}
-    <ProjectCard
-      title="ChekwasyBet (First Version)"
-      description={`Early betting system built with React and Express.
-```
-
-Established foundational backend APIs, routing logic, and system design principles that evolved into later platforms.`}
-tech={["React", "Express", "MongoDB"]}
-live="https://bet-chekwasy-tech.vercel.app/"
-github="https://github.com/Chekwasy/bet.chekwasy.tech"
-/> </section>
-
-```
-  {/* CONTACT */}
-  <section className="text-center space-y-6">
-    <h2 className="text-3xl font-semibold">
-      Let’s Build Something Scalable
-    </h2>
-
-    <p className="text-zinc-400">
-      I’m open to opportunities where I can build impactful systems and
-      solve real-world problems.
-    </p>
-
-    <a
-      href="mailto:richardchekwas@gmail.com"
-      className="inline-block px-8 py-4 rounded-full bg-white text-black font-medium"
-    >
-      Get In Touch
-    </a>
-  </section>
-</div>
-```
-
-);
-}
-
-/* 🔥 REUSABLE PROJECT CARD */
-function ProjectCard({ title, description, tech, live, github }: any) {
-return ( <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition"> <h3 className="text-2xl font-semibold">{title}</h3>
-
-```
-  <p className="mt-4 text-zinc-400 whitespace-pre-line">
-    {description}
-  </p>
-
-  <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
-    {tech.map((t: string) => (
-      <span key={t}>{t}</span>
-    ))}
-  </div>
-
-  <div className="mt-6 flex gap-4">
-    {live && (
-      <a
-        href={live}
-        target="_blank"
-        className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium"
-      >
-        Live Demo
-      </a>
-    )}
-
-    {github && (
-      <a
-        href={github}
-        target="_blank"
-        className="px-4 py-2 rounded-full border border-white/20 text-sm"
-      >
-        GitHub
-      </a>
-    )}
-  </div>
-</div>
-```
-
-);
-}
-export default function Home() {
-return ( <div className="space-y-40">
-
-```
-  {/* HERO */}
-  <section className="min-h-[85vh] flex flex-col justify-center">
-    <p className="text-sm uppercase tracking-widest text-zinc-400">
-      Full Stack TypeScript Engineer · Backend Systems
-    </p>
-
-    <h1 className="mt-6 text-5xl md:text-7xl font-bold leading-tight">
-      I design and build scalable backend-driven platforms.
-    </h1>
-
-    <p className="mt-8 max-w-2xl text-lg text-zinc-400">
-      I build real-world systems with secure authentication, structured
-      databases, and production-grade architecture. My work focuses on
-      PostgreSQL (TypeORM & Supabase), Redis caching, and designing systems
-      that scale reliably under real usage.
-    </p>
-
-    <div className="mt-6 flex flex-wrap gap-3 text-sm text-zinc-500">
-      <span className="border border-white/10 px-3 py-1 rounded-full">
-        Backend Engineering
-      </span>
-      <span className="border border-white/10 px-3 py-1 rounded-full">
-        System Design
-      </span>
-      <span className="border border-white/10 px-3 py-1 rounded-full">
-        PostgreSQL / TypeORM
-      </span>
-      <span className="border border-white/10 px-3 py-1 rounded-full">
-        Redis / JWT Auth
-      </span>
-      <span className="border border-white/10 px-3 py-1 rounded-full">
-        MongoDB / Supabase
-      </span>
-    </div>
-
-    <div className="mt-10 flex flex-wrap gap-4">
-      <a
-        href="#projects"
-        className="px-6 py-3 rounded-full bg-white text-black font-medium hover:opacity-90 transition"
-      >
-        View Projects
-      </a>
-
-      <a
-        href="https://github.com/Chekwasy"
-        target="_blank"
-        className="px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition"
-      >
-        GitHub
-      </a>
-    </div>
-  </section>
-
-  {/* PROJECTS */}
-  <section id="projects" className="space-y-16">
-    <h2 className="text-4xl font-semibold">Projects</h2>
-
-    {/* HEALTHCARE TYPEORM */}
-    <ProjectCard
-      title="Healthcare Appointment System (TypeORM + Redis + JWT)"
-      description={`A production-grade healthcare system with role-based workflows for doctors and patients.
-```
-
-Patients can book, cancel, and reschedule appointments, while doctors manage schedules and confirm visits.
-
-Built with TypeORM and PostgreSQL for strict relational integrity. Authentication is handled using JWT and Redis sessions.
-
-Implements slot locking, transactional booking, and strict state transitions to prevent double booking and ensure data consistency.`}
-tech={["Next.js", "TypeScript", "PostgreSQL", "TypeORM", "Redis", "JWT"]}
-github="https://github.com/Chekwasy/health-typeorm"
-/>
-
-```
-    {/* HEALTHCARE SUPABASE */}
-    <ProjectCard
-      title="Healthcare Appointment System (Supabase Version)"
-      description={`Initial version of the healthcare system built with Supabase.
-```
-
-Focused on rapid development using Supabase Auth and relational joins.
-
-Handled scheduling, booking, and role-based access control.
-
-This project demonstrates the transition from backend-as-a-service to a fully custom backend architecture.`}
-tech={["Next.js", "Supabase", "PostgreSQL"]}
-live="https://health-frontend-eight.vercel.app/"
-github="https://github.com/Chekwasy/health-frontend"
-/>
-
-```
-    {/* TRYBET CURRENT */}
-    <ProjectCard
-      title="Trybet (PostgreSQL + Supabase)"
-      description={`A scalable betting simulation platform with wallet systems and prediction logic.
-```
-
-Built using PostgreSQL relational design and Supabase for real-time updates.
-
-Includes transaction flows, admin controls, and optimized UI for engagement.`}
-tech={["Next.js", "PostgreSQL", "Supabase"]}
-live="https://trybet.com.ng"
-/>
-
-```
-    {/* SAFEBOARD */}
-    <ProjectCard
-      title="SafeBoard – Transport Safety Platform"
-      description={`A real-world system for verifying vehicle data and improving transport safety.
-```
-
-Includes media uploads using Cloudinary and backend validation pipelines.
-
-Designed for scalability and structured data handling.`}
-tech={["Next.js", "Supabase", "Cloudinary"]}
-live="https://safeboard.com.ng"
-/>
-
-```
-    {/* TRYBET REDIS */}
-    <ProjectCard
-      title="Trybet (MongoDB + Redis Version)"
-      description={`Performance-optimized version of Trybet using MongoDB and Redis.
-```
-
-Focuses on caching, reducing database load, and improving response time.
-
-Demonstrates system performance optimization techniques.`}
-tech={["MongoDB", "Redis", "Node.js"]}
-live="https://nextjs-qvmz.vercel.app/"
-github="https://github.com/Chekwasy/trybet-betting-platform/"
-/>
-
-```
-    {/* WORKER SYSTEM */}
-    <ProjectCard
-      title="Worker Management System"
-      description={`Admin dashboard with authentication, CRUD operations, and image uploads.
-```
-
-Designed to demonstrate structured backend logic and UI interaction patterns.`}
-tech={["Next.js", "MongoDB"]}
-live="https://crudapp-alpha-one.vercel.app/"
-github="https://github.com/Chekwasy/worker-management-system"
-/>
-
-```
-    {/* CHEKWASYBET */}
-    <ProjectCard
-      title="ChekwasyBet (First Version)"
-      description={`Early betting system built with React and Express.
-```
-
-Established foundational backend APIs, routing logic, and system design principles that evolved into later platforms.`}
-tech={["React", "Express", "MongoDB"]}
-live="https://bet-chekwasy-tech.vercel.app/"
-github="https://github.com/Chekwasy/bet.chekwasy.tech"
-/> </section>
-
-```
-  {/* CONTACT */}
-  <section className="text-center space-y-6">
-    <h2 className="text-3xl font-semibold">
-      Let’s Build Something Scalable
-    </h2>
-
-    <p className="text-zinc-400">
-      I’m open to opportunities where I can build impactful systems and
-      solve real-world problems.
-    </p>
-
-    <a
-      href="mailto:richardchekwas@gmail.com"
-      className="inline-block px-8 py-4 rounded-full bg-white text-black font-medium"
-    >
-      Get In Touch
-    </a>
-  </section>
-</div>
-```
-
-);
-}
-
-/* 🔥 REUSABLE PROJECT CARD */
-function ProjectCard({ title, description, tech, live, github }: any) {
-return ( <div className="p-8 border border-white/10 rounded-2xl hover:border-white/40 transition"> <h3 className="text-2xl font-semibold">{title}</h3>
-
-```
-  <p className="mt-4 text-zinc-400 whitespace-pre-line">
-    {description}
-  </p>
-
-  <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
-    {tech.map((t: string) => (
-      <span key={t}>{t}</span>
-    ))}
-  </div>
-
-  <div className="mt-6 flex gap-4">
-    {live && (
-      <a
-        href={live}
-        target="_blank"
-        className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium"
-      >
-        Live Demo
-      </a>
-    )}
-
-    {github && (
-      <a
-        href={github}
-        target="_blank"
-        className="px-4 py-2 rounded-full border border-white/20 text-sm"
-      >
-        GitHub
-      </a>
-    )}
-  </div>
-</div>
-```
-
-);
+  );
 }
