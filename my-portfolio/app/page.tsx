@@ -1,6 +1,6 @@
 import React from 'react';
 
-/* ✅ TYPES */
+/* TYPES */
 type ProjectProps = {
   title: string;
   description: string;
@@ -9,7 +9,6 @@ type ProjectProps = {
   github?: string;
 };
 
-/* ✅ SUB-COMPONENT: PROJECT CARD */
 function ProjectCard({
   title,
   description,
@@ -27,8 +26,8 @@ function ProjectCard({
 
       <div className="mt-6 flex flex-wrap gap-2">
         {tech.map((t) => (
-          <span 
-            key={t} 
+          <span
+            key={t}
             className="px-2 py-1 rounded bg-zinc-800 text-zinc-500 text-[10px] uppercase tracking-wider font-medium"
           >
             {t}
@@ -63,39 +62,42 @@ function ProjectCard({
   );
 }
 
-/* ✅ MAIN PAGE */
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-zinc-100 selection:bg-white selection:text-black">
       <main className="max-w-5xl mx-auto px-6 pb-24 space-y-40">
-        
-        {/* HERO SECTION */}
+
+        {/* HERO */}
         <section className="min-h-[90vh] flex flex-col justify-center">
           <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 font-medium">
-            Full Stack TypeScript Engineer · Backend Systems
+            Full Stack TypeScript Engineer · Backend Systems · Infrastructure
           </p>
 
           <h1 className="mt-8 text-5xl md:text-8xl font-bold tracking-tight leading-[1.1]">
-            I design and build <br />
-            <span className="text-zinc-500">scalable platforms.</span>
+            I build real-world <br />
+            <span className="text-zinc-500">production systems.</span>
           </h1>
 
           <p className="mt-10 max-w-2xl text-xl text-zinc-400 leading-relaxed">
-            I build real-world systems with secure authentication, structured
-            databases, and production-grade architecture. My work focuses on
-            PostgreSQL (TypeORM & Supabase), Redis caching, and designing systems
-            that scale reliably under real usage.
+            I design and deploy backend-driven applications with real users,
+            focusing on scalable architecture, real-time data processing,
+            authentication systems, and cloud infrastructure. My work spans
+            PostgreSQL systems, Redis caching, and production deployments using
+            Linux servers, reverse proxies, and secure environments.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3 text-sm">
             {[
-              "Backend Engineering", 
-              "System Design", 
-              "PostgreSQL / TypeORM", 
-              "Redis / JWT Auth", 
-              "MongoDB / Supabase"
+              "Backend Engineering",
+              "System Design",
+              "PostgreSQL / Supabase",
+              "Redis / JWT Auth",
+              "Cloud Deployment (Linux, Nginx)",
             ].map((skill) => (
-              <span key={skill} className="border border-white/10 px-4 py-1.5 rounded-full bg-zinc-900/50">
+              <span
+                key={skill}
+                className="border border-white/10 px-4 py-1.5 rounded-full bg-zinc-900/50"
+              >
                 {skill}
               </span>
             ))}
@@ -120,38 +122,75 @@ export default function Home() {
           </div>
         </section>
 
-        {/* PROJECTS SECTION */}
+        {/* ENGINEERING FOCUS */}
+        <section className="space-y-6">
+          <h2 className="text-2xl font-semibold">Engineering Focus</h2>
+          <p className="text-zinc-400 max-w-3xl">
+            I specialize in backend-focused systems with real-world usage. My
+            work involves designing scalable APIs, integrating external data
+            sources, handling real-time updates, implementing authentication
+            systems, and deploying applications with production-grade
+            infrastructure including Nginx, SSL, and server management.
+          </p>
+        </section>
+
+        {/* FEATURED PROJECTS */}
         <section id="projects" className="space-y-12">
           <div className="space-y-2">
-            <h2 className="text-4xl font-bold tracking-tight">Selected Projects</h2>
+            <h2 className="text-4xl font-bold tracking-tight">
+              Featured Projects
+            </h2>
             <div className="h-1 w-20 bg-white rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 gap-8">
+
             <ProjectCard
-              title="Healthcare Appointment System (TypeORM + Redis + JWT)"
-              description="A production-grade healthcare system with role-based workflows for doctors and patients. Implements slot locking and transactional booking to prevent double booking."
+              title="Trybet – Real-Time Betting Simulation Platform (Production)"
+              description={`A live betting simulation platform enabling users to predict real-time games using dynamic odds.
+
+Integrated external live score data sources for automated result validation and outcome processing.
+
+Built full-stack architecture using Next.js and Node.js with Supabase (PostgreSQL & Auth), designed for real user activity and concurrent interactions.
+
+Deployed on cloud infrastructure with Nginx/HAProxy reverse proxy, SSL (Certbot), and continuous system improvements.`}
+              tech={["Next.js", "Node.js", "PostgreSQL", "Supabase", "Redis"]}
+              live="https://trybet.com.ng"
+            />
+
+            <ProjectCard
+              title="Healthcare Appointment System (Production Architecture)"
+              description={`Designed a scalable healthcare platform with role-based workflows for doctors and patients.
+
+Implemented transactional booking logic and slot management to prevent double booking.
+
+Built secure authentication using JWT and Redis sessions, with structured PostgreSQL schema using TypeORM.`}
               tech={["Next.js", "TypeScript", "PostgreSQL", "TypeORM", "Redis", "JWT"]}
               github="https://github.com/Chekwasy/health-typeorm"
             />
 
             <ProjectCard
-              title="Trybet (PostgreSQL + Supabase)"
-              description="A betting simulation platform with wallet logic and prediction systems. Built with relational PostgreSQL design and real-time updates."
-              tech={["Next.js", "PostgreSQL", "Supabase"]}
-              live="https://trybet.com.ng"
-            />
-
-            <ProjectCard
               title="SafeBoard – Transport Safety Platform"
-              description="A system for verifying vehicle data with structured backend workflows. Includes Cloudinary media uploads and validation pipelines."
+              description={`Built a verification platform for vehicle data with structured backend workflows and validation pipelines.
+
+Implemented media uploads using Cloudinary and designed backend logic for real-time verification and processing.`}
               tech={["Next.js", "Supabase", "Cloudinary"]}
               live="https://safeboard.com.ng"
             />
+          </div>
+        </section>
+
+        {/* OTHER PROJECTS */}
+        <section className="space-y-10">
+          <h2 className="text-2xl font-semibold text-zinc-400">
+            Earlier Projects & Experiments
+          </h2>
+
+          <div className="grid grid-cols-1 gap-6">
 
             <ProjectCard
-              title="Healthcare Appointment System (Supabase Version)"
-              description="Initial version handled scheduling and role-based access control. Demonstrates the transition from BaaS to custom architecture."
+              title="Healthcare System (Supabase Version)"
+              description="Initial version demonstrating real-time database usage, authentication, and scheduling logic before transitioning to custom backend architecture."
               tech={["Next.js", "Supabase", "PostgreSQL"]}
               live="https://health-frontend-eight.vercel.app/"
               github="https://github.com/Chekwasy/health-frontend"
@@ -159,22 +198,22 @@ export default function Home() {
 
             <ProjectCard
               title="Trybet (MongoDB + Redis Version)"
-              description="Performance-focused version using MongoDB and Redis caching. Optimized for fast reads and reduced database load."
+              description="Earlier performance-focused version using MongoDB and Redis for caching and fast reads, demonstrating system evolution and optimization strategies."
               tech={["MongoDB", "Redis", "Node.js"]}
-              live="https://nextjs-qvmz.vercel.app/"
               github="https://github.com/Chekwasy/trybet-betting-platform/"
             />
           </div>
         </section>
 
-        {/* CONTACT SECTION */}
+        {/* CONTACT */}
         <section className="py-20 border-t border-white/10 text-center space-y-8">
           <h2 className="text-4xl md:text-5xl font-bold">
             Let’s Build Something Scalable
           </h2>
 
           <p className="text-zinc-400 max-w-md mx-auto text-lg">
-            I’m currently open to new opportunities and technical collaborations.
+            I’m open to backend engineering roles, cloud-focused positions,
+            and building production systems with real impact.
           </p>
 
           <a
@@ -184,6 +223,7 @@ export default function Home() {
             Get In Touch
           </a>
         </section>
+
       </main>
     </div>
   );
