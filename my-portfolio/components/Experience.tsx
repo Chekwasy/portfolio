@@ -37,7 +37,7 @@ const experiences = [
   {
     title: "Full Stack Developer",
     company: "Enterprise Metric Suite Solutions Limited",
-    period: "2026",
+    period: "2025",
     type: "Professional Experience",
     color: "blue",
     achievements: [
